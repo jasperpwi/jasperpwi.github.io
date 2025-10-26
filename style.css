@@ -4,50 +4,14 @@
   --text: #111111;
   --accent: #d0d0d0;
 }
-
 body.dark {
   --bg: #111111;
   --text: #f0f0f0;
   --accent: #666666;
 }
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: Arial, sans-serif;
-  margin: 0;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 20px;
-  background: var(--accent);
-}
-
-.navbar a, .navbar button {
-  margin-left: 15px;
-  color: var(--text);
-  text-decoration: none;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: #efefef;
-}
-
-.content {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-footer {
-  text-align: center;
-  padding: 40px 0;
-  opacity: 0.6;
-}
+body { background: var(--bg); color: var(--text); font-family: Arial, sans-serif; margin: 0; }
+.navbar { display: flex; justify-content: space-between; padding: 15px 20px; background: var(--accent); }
+.navbar a, .navbar button { margin-left: 15px; color: var(--text); text-decoration: none; border: none; background: none; cursor: pointer; }
+.hero { text-align: center; padding: 80px 20px; background: #efefef; }
+.content { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+footer { text-align: center; padding: 40px 0; opacity: 0.6; }
