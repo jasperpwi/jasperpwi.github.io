@@ -63,58 +63,6 @@ body {
   width: 100%;
 }
 
-/* Light/Dark Toggle Fix with Label */
-.toggle {
-  width: 60px;               /* total width of toggle bar */
-  height: 26px;              /* height of toggle bar */
-  background: var(--accent);
-  border-radius: 26px;
-  position: relative;
-  cursor: pointer;
-  margin-left: 20px;
-  transition: background 0.4s;
-  display: flex;
-  align-items: center;
-  padding: 0 3px;
-  box-sizing: border-box;
-}
-
-.toggle-circle {
-  width: 22px;
-  height: 22px;
-  background: var(--text);
-  border-radius: 50%;
-  position: absolute;
-  top: 2px;                  /* center vertically */
-  left: 2px;                 /* start position */
-  transition: left 0.4s, background 0.4s;
-  z-index: 2;
-}
-
-.toggle-label {
-  position: absolute;
-  right: 6px;
-  font-size: 10px;
-  color: var(--text);
-  z-index: 1;
-  pointer-events: none;
-  user-select: none;
-  transition: color 0.3s;
-}
-
-/* Dark mode active state */
-body.dark .toggle {
-  background: #4CAF50;       /* bar color when dark */
-}
-
-body.dark .toggle-circle {
-  left: 36px;                /* moves circle to right */
-}
-
-body.dark .toggle-label {
-  color: white;
-}
-
 /* Hero */
 .hero {
   text-align: center;
