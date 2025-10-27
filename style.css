@@ -170,3 +170,38 @@ footer {
     padding-bottom: 8px;
   }
 }
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero-name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-subtext {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+
+  /* Center navbar links on mobile */
+  .nav-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* Hero name size for phone */
+  .hero-name {
+    font-size: 2.4rem;
+    font-weight: 800; /* Stronger bold on mobile */
+  }
+}
