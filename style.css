@@ -26,16 +26,27 @@ body {
 /* NAVBAR */
 .navbar {
   display: flex;
-  justify-content: space-between; /* left name, right links */
   align-items: center;
   padding: 15px 20px;
   background: var(--nav-bg);
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-.nav-left {
-  font-weight: bold; /* bold for desktop */
-  margin-left: 0;    /* flush left */
+/* Home page: links flush right */
+body.home .navbar {
+  justify-content: flex-end;
+}
+
+/* Subpages: left name + right links */
+body:not(.home) .navbar {
+  justify-content: space-between;
+}
+
+/* Subpages: left name styling */
+body:not(.home) .nav-left {
+  font-weight: bold;
+  margin-left: 0;
+  display: block;
 }
 
 .nav-right {
