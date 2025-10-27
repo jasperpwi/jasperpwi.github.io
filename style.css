@@ -1,4 +1,3 @@
-
 :root {
   --bg: #fafafa;
   --text: #1a1a1a;
@@ -26,7 +25,7 @@ body {
 /* NAVBAR */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; /* flush right on desktop */
   align-items: center;
   padding: 15px 20px;
   background: var(--nav-bg);
@@ -60,8 +59,6 @@ body {
 .nav-right a:hover::after {
   width: 100%;
 }
-
-/* REMOVED TOGGLE STYLES */
 
 /* HERO SECTION */
 .hero {
@@ -110,19 +107,27 @@ footer {
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* center on mobile */
     padding: 15px 10px;
   }
 
   .nav-right {
     display: flex;
     flex-direction: column;
+    align-items: center; /* ensure centered */
     width: 100%;
     margin-top: 10px;
+    gap: 12px;
   }
 
   .nav-right a {
     margin: 8px 0;
+  }
+
+  /* Hero name size for mobile */
+  .hero-name {
+    font-size: 2.4rem;
+    font-weight: 800; 
   }
 }
 
@@ -136,72 +141,3 @@ footer {
   .hero {
     padding: 60px 15px;
   }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
-/* CARD STACKS ON MOBILE */
-@media (max-width: 600px) {
-  .card-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-}
-
-/* Homepage Name Styling */
-.homepage-name {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-/* Mobile Center Title and Navbar Name */
-@media (max-width: 768px) {
-  .nav-left {
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    padding-bottom: 8px;
-  }
-}
-
-/* Hero section */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.hero-name {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.hero-subtext {
-  font-size: 1.2rem;
-  opacity: 0.8;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-
-  /* Center navbar links on mobile */
-  .nav-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  /* Hero name size for phone */
-  .hero-name {
-    font-size: 2.4rem;
-    font-weight: 800; /* Stronger bold on mobile */
-  }
-}
