@@ -154,3 +154,17 @@ footer {
     padding-bottom: 8px;
   }
 }
+
+/* Navbar left name */
+.nav-left {
+  font-weight: bold;      /* ensures bold text */
+  margin-left: 0;         /* flush to the left */
+}
+
+/* Desktop specific adjustment */
+@media (min-width: 769px) {
+  .navbar {
+    justify-content: space-between; /* keeps nav-left left, nav-right right */
+    padding-left: 20px;            /* optional: matches Projects page spacing */
+  }
+}
