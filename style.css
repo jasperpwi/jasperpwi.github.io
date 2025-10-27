@@ -153,3 +153,20 @@ footer {
     gap: 15px;
   }
 }
+
+/* Homepage Name Styling */
+.homepage-name {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Mobile Center Title and Navbar Name */
+@media (max-width: 768px) {
+  .nav-left {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 8px;
+  }
+}
