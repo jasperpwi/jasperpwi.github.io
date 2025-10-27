@@ -17,6 +17,7 @@ body {
 .page-fade {
   animation: fadeIn 0.4s ease;
 }
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
@@ -25,11 +26,16 @@ body {
 /* NAVBAR */
 .navbar {
   display: flex;
-  justify-content: flex-end; /* flush right on desktop */
+  justify-content: space-between; /* left name, right links */
   align-items: center;
   padding: 15px 20px;
   background: var(--nav-bg);
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.nav-left {
+  font-weight: bold; /* bold for desktop */
+  margin-left: 0;    /* flush left */
 }
 
 .nav-right {
@@ -111,10 +117,16 @@ footer {
     padding: 15px 10px;
   }
 
+  .nav-left {
+    width: 100%;
+    text-align: center; /* center name on mobile */
+    padding-bottom: 8px;
+    font-weight: bold; /* ensure bold on mobile */
+  }
+
   .nav-right {
-    display: flex;
     flex-direction: column;
-    align-items: center; /* ensure centered */
+    align-items: center; /* center links on mobile */
     width: 100%;
     margin-top: 10px;
     gap: 12px;
@@ -140,31 +152,5 @@ footer {
 
   .hero {
     padding: 60px 15px;
-  }
-
-/* Bold left name and center it on mobile */
-.nav-left {
-  font-weight: bold;
-}
-
-@media (max-width: 768px) {
-  .nav-left {
-    width: 100%;
-    text-align: center; /* centers name on mobile */
-    padding-bottom: 8px;
-  }
-}
-
-/* Navbar left name */
-.nav-left {
-  font-weight: bold;      /* ensures bold text */
-  margin-left: 0;         /* flush to the left */
-}
-
-/* Desktop specific adjustment */
-@media (min-width: 769px) {
-  .navbar {
-    justify-content: space-between; /* keeps nav-left left, nav-right right */
-    padding-left: 20px;            /* optional: matches Projects page spacing */
   }
 }
