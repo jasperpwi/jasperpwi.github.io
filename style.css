@@ -141,3 +141,16 @@ footer {
   .hero {
     padding: 60px 15px;
   }
+
+/* Bold left name and center it on mobile */
+.nav-left {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .nav-left {
+    width: 100%;
+    text-align: center; /* centers name on mobile */
+    padding-bottom: 8px;
+  }
+}
