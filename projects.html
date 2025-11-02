@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
-<script src="projects.js" defer></script>
+<script defer src="theme.js"></script>
 <title>Projects - Jasper Pwi</title>
 </head>
 <body class="page-fade">
@@ -20,80 +20,144 @@
 </nav>
 
 <section class="content">
-  <h1>Projects</h1>
-  
-  <div class="card-grid">
+<h1>Projects</h1>
 
-    <!-- Project 1 -->
-    <div class="card accordion-card">
-      <h3>AI-powered Mail Categorization <span class="badge">In Development</span></h3>
-      <p class="summary">Automated AI workflow categorizing emails into 600+ labels across 13 countries.</p>
-      <button class="accordion-toggle">Details ▼</button>
-      <div class="accordion-content">
-        <p><strong>Impact:</strong> Saves ~30 hours/month at 50% email coverage and increases business compliance.</p>
-        <p><strong>Scalability:</strong> Can scale to 20+ local teams and multiple regional hubs.</p>
-        <strong>Key Steps:</strong>
-        <ul>
-          <li>Workflow architecture for full automation</li>
-          <li>JavaScript retrieval + processing pipelines</li>
-          <li>Historic data vector embedding for better accuracy</li>
-          <li>Taxonomy creation for mapping logic</li>
-        </ul>
+<div class="card-grid">
+
+  <!-- Project 1 -->
+  <div class="accordion-card">
+    <div class="card-header">
+      <div class="card-title">
+        <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+        <h3>AI-powered Mail Categorization <span class="badge">In development</span></h3>
       </div>
+      <button class="accordion-toggle" aria-expanded="false">
+        <span class="chev">&#9660;</span>
+      </button>
     </div>
-
-    <!-- Project 2 -->
-    <div class="card accordion-card">
-      <h3>Gmail → Drive Archival</h3>
-      <p class="summary">One-click archival of Gmail content into Drive — removing download steps entirely.</p>
-      <button class="accordion-toggle">Details ▼</button>
-      <div class="accordion-content">
-        <p><strong>Impact:</strong> Eliminated 95% manual archival workload; +1–2 hours saved monthly across team.</p>
-        <p><strong>Scalability:</strong> Ready for APAC + global rollout.</p>
-        <strong>Key Steps:</strong>
-        <ul>
-          <li>Mapped required archival types + folder structures</li>
-          <li>Enhanced JS workflows to automate 3 core use cases</li>
-          <li>Monthly automated categorization implemented</li>
-        </ul>
-      </div>
+    <p>Usage of AI to categorize emails into 600 labels across 13 countries and 40+ topics.</p>
+    <div class="accordion-content" aria-live="polite">
+      <h4>Impact</h4>
+      <p>Saves 30 hours/month per team at 50% volume coverage and increases compliance.</p>
+      <h4>Scalability</h4>
+      <p>Potential to deploy to all local teams (>20) and 5 regional teams.</p>
+      <h4>Key Steps</h4>
+      <ul>
+        <li>Architecture of workflow for independent execution.</li>
+        <li>JavaScript-based retrieval and output workflow.</li>
+        <li>Training model with vector embeddings.</li>
+        <li>Formation of taxonomy table for categorization mapping.</li>
+      </ul>
     </div>
-
-    <!-- Project 3 -->
-    <div class="card accordion-card">
-      <h3>Reconciliation Tool</h3>
-      <p class="summary">Automated matching of internal database vs vendor tracker with reporting.</p>
-      <button class="accordion-toggle">Details ▼</button>
-      <div class="accordion-content">
-        <p><strong>Impact:</strong> Reduced 80% manual checking workload; saves 30–60 mins monthly.</p>
-        <strong>Key Steps:</strong>
-        <ul>
-          <li>Defined key identifier mapping</li>
-          <li>JavaScript reconciliation + report generation</li>
-          <li>Expanded to support multi-country formats</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Project 4 -->
-    <div class="card accordion-card">
-      <h3>Centralized Directory</h3>
-      <p class="summary">Centralized repository containing tools + documentation for daily operations.</p>
-      <button class="accordion-toggle">Details ▼</button>
-      <div class="accordion-content">
-        <p><strong>Impact:</strong> Improved visibility and tool discoverability.</p>
-        <strong>Key Steps:</strong>
-        <ul>
-          <li>Organized content; resolved duplicate/conflicting entries</li>
-          <li>UI design + navigation mapping</li>
-          <li>Final tool assembly + testing</li>
-        </ul>
-      </div>
-    </div>
-
   </div>
+
+  <!-- Project 2 -->
+  <div class="accordion-card">
+    <div class="card-header">
+      <div class="card-title">
+        <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16"/></svg>
+        <h3>Gmail to Google Drive Archival</h3>
+      </div>
+      <button class="accordion-toggle" aria-expanded="false">
+        <span class="chev">&#9660;</span>
+      </button>
+    </div>
+    <p>Automated archival from Gmail to Google Drive in one click.</p>
+    <div class="accordion-content" aria-live="polite">
+      <h4>Impact</h4>
+      <p>Reduces 95% of archival work, saving 1-2 hours/month per team.</p>
+      <h4>Scalability</h4>
+      <p>Potential to deploy to APAC affiliates and other hubs globally.</p>
+      <h4>Key Steps</h4>
+      <ul>
+        <li>Identify necessary archival types and folder-specific mapping.</li>
+        <li>Map labels to folders and programs.</li>
+        <li>Enhance JavaScript workflow for 3 additional use cases.</li>
+        <li>Organize information, design interface, and test product.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="accordion-card">
+    <div class="card-header">
+      <div class="card-title">
+        <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><polygon points="12,2 22,22 2,22"/></svg>
+        <h3>Reconciliation Tool</h3>
+      </div>
+      <button class="accordion-toggle" aria-expanded="false">
+        <span class="chev">&#9660;</span>
+      </button>
+    </div>
+    <p>Reconciles internal database and vendor tracker on sensitive data.</p>
+    <div class="accordion-content" aria-live="polite">
+      <h4>Impact</h4>
+      <p>Reduces 80% of manual checking, saving 30-60 minutes/month.</p>
+      <h4>Scalability</h4>
+      <p>None</p>
+      <h4>Key Steps</h4>
+      <ul>
+        <li>Map key identifiers between database and vendor tracker.</li>
+        <li>Create JavaScript execution and results output.</li>
+        <li>Feature expansion for multiple report formats.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Project 4 -->
+  <div class="accordion-card">
+    <div class="card-header">
+      <div class="card-title">
+        <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+        <h3>Centralized Directory</h3>
+      </div>
+      <button class="accordion-toggle" aria-expanded="false">
+        <span class="chev">&#9660;</span>
+      </button>
+    </div>
+    <p>Google Sheets centralized repository with clickable topic buttons.</p>
+    <div class="accordion-content" aria-live="polite">
+      <h4>Impact</h4>
+      <p>Improved accessibility and clarity for all members in daily processes.</p>
+      <h4>Key Steps</h4>
+      <ul>
+        <li>Organize data and tools on a centralized sheet.</li>
+        <li>Clickable buttons redirect to elaborated pages.</li>
+        <li>Test accessibility and clarity for all users.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
 </section>
 
 <footer><p>© 2025 Jasper Pwi</p></footer>
+
+<script>
+document.querySelectorAll('.accordion-toggle').forEach(button => {
+  button.addEventListener('click', () => {
+    const card = button.closest('.accordion-card');
+    card.classList.toggle('open');
+
+    // Update aria-expanded for screen readers
+    const expanded = card.classList.contains('open');
+    button.setAttribute('aria-expanded', expanded);
+
+    // Announce status in hidden live region
+    let liveRegion = document.getElementById('live-region');
+    if(!liveRegion){
+      liveRegion = document.createElement('div');
+      liveRegion.id = 'live-region';
+      liveRegion.className = 'sr-only';
+      liveRegion.setAttribute('aria-live','polite');
+      document.body.appendChild(liveRegion);
+    }
+    liveRegion.textContent = expanded 
+      ? `${card.querySelector('h3').textContent} expanded` 
+      : `${card.querySelector('h3').textContent} collapsed`;
+  });
+});
+</script>
+
 </body>
 </html>

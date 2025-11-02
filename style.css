@@ -100,6 +100,7 @@ body:not(.home) .nav-left {
   margin-top: 30px;
 }
 
+/* CARD BASE */
 .card {
   background: var(--hero-bg);
   padding: 20px;
@@ -166,45 +167,99 @@ footer {
   }
 }
 
-/* ACCORDION */
+/* -------------------
+   ACCORDION + ICONS
+   ------------------- */
 .accordion-card {
-  overflow: hidden;
+  background: var(--hero-bg);
+  padding: 18px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: box-shadow 0.25s ease, transform 0.18s ease;
+  position: relative;
+  overflow: visible;
 }
 
+/* Full row expansion */
+.accordion-card.open {
+  grid-column: 1 / -1;
+  z-index: 5;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Header layout */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* Icon + title group */
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Inline SVG icons */
+.icon {
+  width: 22px;
+  height: 22px;
+  color: var(--text);
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+/* Toggle button (chevron) */
 .accordion-toggle {
   border: none;
   background: none;
   cursor: pointer;
-  padding: 10px 0;
-  width: 100%;
-  text-align: left;
-  font-weight: bold;
-  transition: 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: var(--text);
+  padding: 6px 8px;
 }
 
+/* Chevron rotation */
+.chev {
+  transition: transform 0.32s cubic-bezier(.2,.9,.2,1);
+  transform-origin: center;
+}
+
+/* Rotate chevron when card is open */
+.accordion-card.open .chev {
+  transform: rotate(180deg);
+}
+
+/* Accordion content animation */
 .accordion-content {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
   transform: translateY(-6px);
   transition:
-    max-height 0.5s ease,
+    max-height 0.45s ease,
     opacity 0.35s ease,
     transform 0.45s ease;
+  margin-top: 12px;
 }
 
 .accordion-card.open .accordion-content {
   opacity: 1;
   transform: translateY(0);
-  max-height: 600px; /* supports large lists */
+  max-height: 1200px;
 }
 
-.accordion-card.open .accordion-toggle {
-  color: var(--text);
-  transform: rotate(0deg);
+.accordion-content ul {
+  margin-top: 8px;
+  padding-left: 1.2rem;
 }
 
-/* Project Status Badge */
+/* PROJECT STATUS BADGE */
 .badge {
   background: #888;
   color: #fff;
@@ -212,4 +267,18 @@ footer {
   padding: 2px 6px;
   border-radius: 6px;
   margin-left: 10px;
+}
+
+/* -------------------
+   SCREEN READER SUPPORT
+   ------------------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
 }
