@@ -92,7 +92,7 @@ body:not(.home) .nav-left {
   padding: 0 20px;
 }
 
-* CARD GRID stacked vertically */
+/* CARD GRID stacked vertically */
 .card-grid {
   display: flex;
   flex-direction: column; /* stack vertically */
@@ -100,22 +100,77 @@ body:not(.home) .nav-left {
   margin-top: 30px;
 }
 
-/* Optional: make card width 100% */
-.card {
-  width: 100%;
+/* CARD BASE */
+.accordion-card {
+  background: var(--hero-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* CARD BASE */
-.card {
-  background: var(--hero-bg);
-  padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* CARD HEADER */
+.accordion-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 16px 20px;
   cursor: pointer;
 }
 
-.card:hover {
-  transform: translateY(-4px);
+/* Icons inside accordion toggles */
+.accordion-toggle i {
+  margin-right: 8px;
+  color: #555;
+}
+
+/* Badge styling */
+.badge {
+  background: #888;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+
+/* CHEVRON ROTATION */
+.chev {
+  transition: transform 0.3s ease;
+}
+.accordion-card.open .chev {
+  transform: rotate(180deg);
+}
+
+/* ACCORDION CONTENT */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 20px;
+  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.35s ease;
+}
+
+/* OPEN STATE */
+.accordion-card.open .accordion-content {
+  opacity: 1;
+  max-height: 1000px; /* large enough for all content */
+  padding: 16px 20px;
+}
+
+/* Lists inside content */
+.accordion-content ul {
+  margin-top: 8px;
+  padding-left: 1.2rem;
+}
+
+/* Hover effect on card */
+.accordion-card:hover {
   box-shadow: 0 8px 16px rgba(0,0,0,0.12);
 }
 
@@ -130,20 +185,20 @@ footer {
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: center; /* center on mobile */
+    align-items: center;
     padding: 15px 10px;
   }
 
   .nav-left {
     width: 100%;
-    text-align: center; /* center name on mobile */
+    text-align: center;
     padding-bottom: 8px;
-    font-weight: bold; /* ensure bold on mobile */
+    font-weight: bold;
   }
 
   .nav-right {
     flex-direction: column;
-    align-items: center; /* center links on mobile */
+    align-items: center;
     width: 100%;
     margin-top: 10px;
     gap: 12px;
@@ -153,10 +208,9 @@ footer {
     margin: 8px 0;
   }
 
-  /* Hero name size for mobile */
   .hero-name {
     font-size: 2.4rem;
-    font-weight: 800; 
+    font-weight: 800;
   }
 }
 
@@ -172,130 +226,7 @@ footer {
   }
 }
 
-/* -------------------
-   ACCORDION + ICONS
-   ------------------- */
-.accordion-card {
-  background: var(--hero-bg);
-  padding: 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-}
-
-.accordion-card:hover {
-  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
-}
-
-
-/* Full row expansion */
-.accordion-card.open {
-  grid-column: 1 / -1;
-  z-index: 5;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-}
-
-/* Header layout */
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-/* Icon + title group */
-.card-title {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-/* Inline SVG icons */
-.icon {
-  width: 22px;
-  height: 22px;
-  color: var(--text);
-  opacity: 0.9;
-  flex-shrink: 0;
-}
-
-/* Toggle button inside each card */
-.accordion-toggle {
-  width: 100%;
-  background: none;
-  border: none;
-  font-weight: bold;
-  font-size: 1rem;
-  text-align: left;
-  padding: 0;
-  cursor: pointer;
-}
-
-/* Chevron rotation */
-.chev {
-  transition: transform 0.32s cubic-bezier(.2,.9,.2,1);
-  transform-origin: center;
-}
-
-/* Rotate chevron when card is open */
-.accordion-card.open .chev {
-  transform: rotate(180deg);
-}
-
-/* Content hidden initially */
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.5s ease, opacity 0.35s ease;
-}
-
-/* Open state */
-.accordion-card.open .accordion-content {
-  opacity: 1;
-  max-height: 1000px; /* large enough for all content */
-}
-
-.accordion-content ul {
-  margin-top: 8px;
-  padding-left: 1.2rem;
-}
-
-/* Icons inside accordion toggles */
-.accordion-toggle i {
-  margin-right: 8px;
-  color: #555; /* optional icon color */
-}
-
-/* Badge spacing */
-.badge {
-  background: #888;
-  color: #fff;
-  font-size: 0.75rem;
-  padding: 2px 6px;
-  border-radius: 6px;
-  margin-left: 10px;
-}
-
-/* Optional: hover effect for icons */
-.accordion-toggle:hover i {
-  color: #333;
-}
-
-/* PROJECT STATUS BADGE */
-.badge {
-  background: #888;
-  color: #fff;
-  font-size: 0.75rem;
-  padding: 2px 6px;
-  border-radius: 6px;
-  margin-left: 10px;
-}
-
-/* -------------------
-   SCREEN READER SUPPORT
-   ------------------- */
+/* SCREEN READER ONLY */
 .sr-only {
   position: absolute;
   width: 1px;
