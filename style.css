@@ -92,11 +92,11 @@ body:not(.home) .nav-left {
   padding: 0 20px;
 }
 
-/* CARD STACK SINGLE COLUMN */
+* CARD GRID stacked vertically */
 .card-grid {
   display: flex;
   flex-direction: column; /* stack vertically */
-  gap: 20px; /* spacing between cards */
+  gap: 20px;
   margin-top: 30px;
 }
 
@@ -177,13 +177,17 @@ footer {
    ------------------- */
 .accordion-card {
   background: var(--hero-bg);
-  padding: 18px;
+  padding: 20px;
   border-radius: 10px;
-  box-sizing: border-box;
-  transition: box-shadow 0.25s ease, transform 0.18s ease;
-  position: relative;
-  overflow: visible;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
+
+.accordion-card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
 
 /* Full row expansion */
 .accordion-card.open {
@@ -216,17 +220,16 @@ footer {
   flex-shrink: 0;
 }
 
-/* Toggle button (chevron) */
+/* Toggle button inside each card */
 .accordion-toggle {
-  border: none;
+  width: 100%;
   background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: left;
+  padding: 0;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 700;
-  color: var(--text);
-  padding: 6px 8px;
 }
 
 /* Chevron rotation */
@@ -240,28 +243,44 @@ footer {
   transform: rotate(180deg);
 }
 
-/* Accordion content animation */
+/* Content hidden initially */
 .accordion-content {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transform: translateY(-6px);
-  transition:
-    max-height 0.45s ease,
-    opacity 0.35s ease,
-    transform 0.45s ease;
-  margin-top: 12px;
+  transition: max-height 0.5s ease, opacity 0.35s ease;
 }
 
+/* Open state */
 .accordion-card.open .accordion-content {
   opacity: 1;
-  transform: translateY(0);
-  max-height: 1200px;
+  max-height: 1000px; /* large enough for all content */
 }
 
 .accordion-content ul {
   margin-top: 8px;
   padding-left: 1.2rem;
+}
+
+/* Icons inside accordion toggles */
+.accordion-toggle i {
+  margin-right: 8px;
+  color: #555; /* optional icon color */
+}
+
+/* Badge spacing */
+.badge {
+  background: #888;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+
+/* Optional: hover effect for icons */
+.accordion-toggle:hover i {
+  color: #333;
 }
 
 /* PROJECT STATUS BADGE */

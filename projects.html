@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
@@ -23,65 +24,79 @@
   <h1>Projects</h1>
   <div class="card-grid">
 
-    <div class="card accordion-card">
-      <button class="accordion-toggle">AI-powered mail categorization <span class="badge">In development</span></button>
-      <div class="accordion-content">
-        <p><strong>Summary:</strong> The usage of AI powered workflow that categorizes emails into 600 labels across 13 countries and 40+ topics.</p>
-        <p><strong>Impact:</strong> Saves 30 hours/month at 50% coverage, improves compliance.</p>
-        <p><strong>Scalability:</strong> Can scale to 20+ local teams and 5 regional teams.</p>
-        <p><strong>Key Steps:</strong></p>
-        <ul>
-          <li>Architecture for independent workflow with daily report</li>
-          <li>Development in JavaScript</li>
-          <li>Model training using historic data and vector embeddings</li>
-          <li>Taxonomy table for label mapping</li>
-        </ul>
-      </div>
-    </div>
+<div class="card-grid">
 
-    <div class="card accordion-card">
-      <button class="accordion-toggle">Gmail to Google Drive Archival</button>
-      <div class="accordion-content">
-        <p><strong>Summary:</strong> Automated archival from Gmail to Google Drive in one click.</p>
-        <p><strong>Impact:</strong> Saves 1-2 hours/month, reduces 95% of manual work.</p>
-        <p><strong>Scalability:</strong> Potential for global deployment.</p>
-        <p><strong>Key Steps:</strong></p>
-        <ul>
-          <li>Identify archival types</li>
-          <li>Map labels to folders and programs</li>
-          <li>Enhance JavaScript for 95% coverage</li>
-        </ul>
-      </div>
+  <div class="accordion-card">
+    <button class="accordion-toggle">
+      <i class="fa-solid fa-robot"></i> AI-powered mail categorization
+      <span class="badge">In Development</span>
+    </button>
+    <div class="accordion-content">
+      <p><strong>Summary:</strong> AI workflow categorizing emails into 600 labels across 13 countries.</p>
+      <p><strong>Impact:</strong> Saves ~30 hours/month for a team at 50% coverage, improves compliance.</p>
+      <p><strong>Scalability:</strong> Can expand to 20+ local teams and 5 regional teams.</p>
+      <p><strong>Key Steps:</strong></p>
+      <ul>
+        <li>Architecture to run independently with daily report.</li>
+        <li>Develop retrieval/output workflow in JavaScript.</li>
+        <li>Train model with historic data using vector embedding.</li>
+        <li>Create taxonomy table for categorization mapping.</li>
+      </ul>
     </div>
-
-    <div class="card accordion-card">
-      <button class="accordion-toggle">Reconciliation Tool</button>
-      <div class="accordion-content">
-        <p><strong>Summary:</strong> Tool reconciles internal database and vendor tracker.</p>
-        <p><strong>Impact:</strong> Reduces 80% of manual checking, saves 30-60 minutes/month.</p>
-        <p><strong>Scalability:</strong> None</p>
-        <p><strong>Key Steps:</strong></p>
-        <ul>
-          <li>Map key identifiers</li>
-          <li>Develop JavaScript for results output</li>
-          <li>Expand for multiple report formats</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="card accordion-card">
-      <button class="accordion-toggle">Centralized Directory</button>
-      <div class="accordion-content">
-        <p><strong>Summary:</strong> Google Sheets repository for all daily processes with clickable topic buttons.</p>
-        <p><strong>Impact:</strong> Improves accessibility and clarity for team members.</p>
-        <p><strong>Key Steps:</strong></p>
-        <ul>
-          <li>Organize and clarify information</li>
-          <li>Design front page interface and back-end mapping</li>
-          <li>Assemble and test final product</li>
-        </ul>
-      </div>
-    </div>
-
   </div>
+
+  <div class="accordion-card">
+    <button class="accordion-toggle">
+      <i class="fa-solid fa-envelope-open-text"></i> Gmail to Google Drive Archival
+      <span class="badge">Completed</span>
+    </button>
+    <div class="accordion-content">
+      <p><strong>Summary:</strong> Automated archival from Gmail to Google Drive in a single click.</p>
+      <p><strong>Impact:</strong> Reduced 95% of archival work, saving 1–2 hours/month per team.</p>
+      <p><strong>Scalability:</strong> Can deploy to APAC affiliates and globally.</p>
+      <p><strong>Key Steps:</strong></p>
+      <ul>
+        <li>Identify archival types and automated folder mapping.</li>
+        <li>Map labels to specific folders and programs.</li>
+        <li>Enhance JS for additional use cases covering 95% volume.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <button class="accordion-toggle">
+      <i class="fa-solid fa-check-double"></i> Reconciliation Tool
+      <span class="badge">Completed</span>
+    </button>
+    <div class="accordion-content">
+      <p><strong>Summary:</strong> Tool reconciling internal DB and vendor trackers, outputting final report.</p>
+      <p><strong>Impact:</strong> Reduced 80% of manual checks, saving 30–60 min/month.</p>
+      <p><strong>Scalability:</strong> N/A</p>
+      <p><strong>Key Steps:</strong></p>
+      <ul>
+        <li>Map key identifiers between DB and vendor tracker.</li>
+        <li>Create JS code for execution and output.</li>
+        <li>Feature expansion to include multiple report formats.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion-card">
+    <button class="accordion-toggle">
+      <i class="fa-solid fa-folder-open"></i> Centralized Directory
+      <span class="badge">Completed</span>
+    </button>
+    <div class="accordion-content">
+      <p><strong>Summary:</strong> Centralized Google Sheets repository for all tools and info.</p>
+      <p><strong>Impact:</strong> Improved accessibility and clarity for daily processes.</p>
+      <p><strong>Key Steps:</strong></p>
+      <ul>
+        <li>Organize info and remove duplicates/conflicts.</li>
+        <li>Design front page interface and back-end mapping.</li>
+        <li>Assemble and test final product.</li>
+      </ul>
+    </div>
+  </div>
+ 
+</div>
 </section>
