@@ -165,3 +165,51 @@ footer {
     padding: 60px 15px;
   }
 }
+
+/* ACCORDION */
+.accordion-card {
+  overflow: hidden;
+}
+
+.accordion-toggle {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 10px 0;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  transition: 0.25s ease;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition:
+    max-height 0.5s ease,
+    opacity 0.35s ease,
+    transform 0.45s ease;
+}
+
+.accordion-card.open .accordion-content {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 600px; /* supports large lists */
+}
+
+.accordion-card.open .accordion-toggle {
+  color: var(--text);
+  transform: rotate(0deg);
+}
+
+/* Project Status Badge */
+.badge {
+  background: #888;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-left: 10px;
+}
